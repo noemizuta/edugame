@@ -89,7 +89,7 @@ En https://console.firebase.google.com, proyecto **edugame-ram**:
    |---|---|
    | `NEXT_PUBLIC_FIREBASE_API_KEY`, `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`, `NEXT_PUBLIC_FIREBASE_PROJECT_ID`, `NEXT_PUBLIC_FIREBASE_APP_ID` | Los de la app web de Firebase |
    | `FIREBASE_PROJECT_ID`, `FIREBASE_CLIENT_EMAIL` | Los del `.json` de la cuenta de servicio |
-   | `FIREBASE_PRIVATE_KEY` | El `private_key` del `.json`, completo, con los `\n` tal cual |
+   | `FIREBASE_PRIVATE_KEY` | El `private_key` del `.json`, completo, con los `\n` tal cual y **sin las comillas** que lleva en `.env.local`. La app también la acepta con comillas, con saltos de línea reales o en una sola línea |
    | `NEXT_PUBLIC_URL_SITIO` | La URL pública, por ejemplo `https://edugame-ram.vercel.app` (la usa el QR de los afiches) |
    | `DOMINIOS_PERMITIDOS` | Opcional, por ejemplo `unac.edu.pe`: solo esas cuentas pueden entrar como estudiantes |
 

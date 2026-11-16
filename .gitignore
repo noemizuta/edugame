@@ -12,6 +12,14 @@ next-env.d.ts
 !.env.example
 *service-account*.json
 *-firebase-adminsdk-*.json
+# cualquier .json suelto en la raíz (p. ej. una clave descargada), salvo los de configuración
+/*.json
+!/firebase.json
+!/firestore.indexes.json
+!/package.json
+!/package-lock.json
+!/tsconfig.json
+!/vercel.json
 
 # emuladores y logs
 firebase-debug.log*

@@ -9,6 +9,23 @@ import { type Firestore, getFirestore } from 'firebase-admin/firestore';
 
 export const usaEmulador = (): boolean => process.env.USE_FIREBASE_EMULATOR === 'true';
 
+/**
+ * Acepta la clave como la pegan los paneles de Vercel o Netlify: con saltos de línea reales, con
+ * `\n` escritos, en una sola línea sin saltos, y con o sin las comillas que lleva en `.env.local`.
+ * Una clave mal armada rompe la firma: Firestore responde con error aunque el ingreso con Google
+ * funcione. Por eso se rearma el formato PEM (encabezado, cuerpo en líneas de 64 y pie).
+ */
+export function clavePrivada(valor: string): string {
+  let k = valor.trim();
+  if (k.length > 1 && (k[0] === '"' || k[0] === "'") && k.endsWith(k[0])) k = k.slice(1, -1);
+  k = k.replace(/\\r/g, '').replace(/\\n/g, '\n').replace(/\r\n/g, '\n');
+  const pem = /-----BEGIN ([A-Z ]+)-----([\s\S]*?)-----END \1-----/.exec(k);
+  if (!pem) return k;
+  const cuerpo = pem[2]!.replace(/\s+/g, '');
+  const lineas = cuerpo.match(/.{1,64}/g) ?? [];
+  return `-----BEGIN ${pem[1]}-----\n${lineas.join('\n')}\n-----END ${pem[1]}-----\n`;
+}
+
 function iniciar(): App {
   const existente = getApps()[0];
   if (existente) return existente;
@@ -33,7 +50,7 @@ function iniciar(): App {
     credential: cert({
       projectId: FIREBASE_PROJECT_ID,
       clientEmail: FIREBASE_CLIENT_EMAIL,
-      privateKey: FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+      privateKey: clavePrivada(FIREBASE_PRIVATE_KEY),
     }),
     projectId: FIREBASE_PROJECT_ID,
   });
