@@ -28,10 +28,12 @@ export function Ingreso() {
 
   const ocupado = entrando || estado.fase === 'cargando' || estado.fase === 'lista';
   const error = estado.fase === 'anonimo' ? estado.error : undefined;
+  const detalle = estado.fase === 'anonimo' ? estado.detalle : undefined;
 
   return (
     <div className="mt-4 flex w-full flex-col gap-3">
       {error && <Aviso tono="rojo">{mensajeError(error)}</Aviso>}
+      {detalle && <p className="text-xs break-all text-white/70">Detalle técnico: {detalle}</p>}
       <Boton
         variante="rosa"
         className="w-full"
