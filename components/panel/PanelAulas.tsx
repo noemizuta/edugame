@@ -34,6 +34,7 @@ const err = (e: unknown) => (e instanceof ErrorCliente ? mensajeError(e.codigo, 
 export function PanelAulas({ titulo, soloLectura = false }: { titulo: string; soloLectura?: boolean }) {
   const { salir, estado } = useSesion();
   const esAdmin = estado.fase === 'lista' && estado.sesion.rol === 'admin';
+  const esPromotor = estado.fase === 'lista' && estado.sesion.rol === 'promotor';
   const { datos, error } = useDatos<{ aulas: AulaPanel[] }>('/api/panel/aulas');
   const [aulaId, setAulaId] = useState<string | null>(null);
 
@@ -103,17 +104,18 @@ export function PanelAulas({ titulo, soloLectura = false }: { titulo: string; so
           </select>
         </div>
       )}
-      {aula && <Pestanas key={aula.id} aula={aula} soloLectura={soloLectura} />}
+      {aula && <Pestanas key={aula.id} aula={aula} soloLectura={soloLectura} propia={esPromotor} />}
     </Contenedor>
   );
 }
 
 type Pestana = 'aula' | 'equipos' | 'evidencias' | 'encuentros' | 'exportar';
 
-function Pestanas({ aula, soloLectura }: { aula: AulaPanel; soloLectura: boolean }) {
+/** `propia`: el promotor ve «Mi aula»; el admin y el investigador, «Aula». */
+function Pestanas({ aula, soloLectura, propia }: { aula: AulaPanel; soloLectura: boolean; propia: boolean }) {
   const exp = aula.brazo === 'experimental';
   const pestanas: { id: Pestana; texto: string }[] = [
-    { id: 'aula', texto: 'Mi aula' },
+    { id: 'aula', texto: propia ? 'Mi aula' : 'Aula' },
     ...(exp ? [{ id: 'equipos' as const, texto: 'Equipos' }, { id: 'evidencias' as const, texto: 'Evidencias' }] : []),
     { id: 'encuentros', texto: 'Encuentros' },
     { id: 'exportar', texto: 'Exportar' },

@@ -49,10 +49,7 @@ function aRespuesta(e: unknown): Response {
     return json(400, { ok: false, error: 'entrada_invalida', campos: e.issues.map((i) => i.path.join('.')) });
   }
   console.error('[api] error inesperado', e);
-  // Temporal, para diagnosticar el despliegue: el código y el mensaje del error (sin datos secretos).
-  const x = e as { code?: unknown; message?: unknown };
-  const detalle = `${x?.code ?? ''} ${typeof x?.message === 'string' ? x.message : String(e)}`.trim().slice(0, 300);
-  return json(500, { ok: false, error: 'error_interno', detalle });
+  return json(500, { ok: false, error: 'error_interno' });
 }
 
 async function leerCuerpo(req: Request): Promise<unknown> {

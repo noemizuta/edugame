@@ -21,7 +21,7 @@ import { Cargando } from './ui';
 
 export type EstadoSesion =
   | { fase: 'cargando' }
-  | { fase: 'anonimo'; error?: string; detalle?: string }
+  | { fase: 'anonimo'; error?: string }
   | { fase: 'lista'; sesion: RespuestaSesion };
 
 interface ValorSesion {
@@ -54,9 +54,7 @@ export function ProveedorSesion({ children }: { children: React.ReactNode }) {
       } catch (e) {
         const codigo = e instanceof ErrorCliente ? e.codigo : 'error_interno';
         if (ERRORES_DE_CUENTA.has(codigo)) await signOut(auth).catch(() => {});
-        // `detalle` (temporal): código y mensaje técnico del servidor, para diagnosticar el despliegue.
-        const detalle = e instanceof ErrorCliente && typeof e.datos.detalle === 'string' ? e.datos.detalle : undefined;
-        setEstado({ fase: 'anonimo', error: codigo, detalle });
+        setEstado({ fase: 'anonimo', error: codigo });
       }
     });
   }, []);

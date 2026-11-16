@@ -41,7 +41,7 @@ function PanelAdmin() {
         <h1 className="text-2xl font-extrabold">Administración</h1>
         <div className="flex items-center gap-4">
           <Link href="/seguimiento" className="min-h-11 content-center text-sm text-cian underline">
-            Seguimiento
+            Seguimiento (vista del investigador)
           </Link>
           <button type="button" className="min-h-11 text-sm text-cian underline" onClick={() => void salir()}>
             Cerrar sesión

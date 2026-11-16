@@ -201,3 +201,12 @@ Al terminar cada fase se informa qué quedó listo y cómo probarlo.
   - La API espejo `/api/vista-previa/...` usa un almacén en memoria que **no escribe nada** (hay una prueba que lo verifica). El código de asistencia en la vista previa es `VISTA`.
   - En la vista previa la Misión 1 no exige el orden de los casos (no hay avance guardado) y no muestra el resultado final.
 - **E2E (Playwright):** usan el Chrome instalado (`channel: 'chrome'`), sin descargar navegadores. Corren contra `next build && next start -p 3200` y los emuladores (`npm run test:e2e`). Cubren los criterios 1, 2, 9 y 15 (diseño a 360 px y sin errores de consola). El resto de criterios está cubierto por las pruebas de API.
+
+## Notas del despliegue (2026-11-15)
+- **Sitio de prueba en Netlify** (`edugameunac.netlify.app`). Las funciones corren en `us-east-2`; `vercel.json` (`gru1`) solo aplica en Vercel.
+- **`firebase-admin` fijado en 13.x. No subir a 14 sin probar en el hosting.**
+  - `firebase-admin` 14 usa `jwks-rsa` 4, que hace `require()` de `jose` 6 (solo módulo ES).
+  - En las funciones de Netlify eso falla con `ERR_REQUIRE_ESM` al cargar `firebase-admin/auth`, y todas las rutas de la API responden 500.
+  - Para probar una versión nueva sin desplegar: `node --no-experimental-require-module -e "require('firebase-admin/auth')"`.
+- **`FIREBASE_PRIVATE_KEY`:** `clavePrivada()` en `lib/firebase-admin.ts` acepta la clave con o sin comillas, con `\n` escritos o reales, o en una sola línea.
+- **Usuarios y roles:** búsqueda por correo o código y «Mostrar población» a demanda, para no leer a todos los usuarios cada vez que se abre la pestaña.
