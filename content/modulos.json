@@ -1,0 +1,460 @@
+{
+  "_nota": "Fuente de verdad de los módulos. Cada módulo e ítem se abre en su 'semana' (semana 0 = medición basal O1), calculada desde la fechaInicio del AULA. 'brazos' limita a experimental o control; si falta, lo ven ambos. Los ítems del módulo 'retos' se generan desde retos.json (ids reto-sN y caso-sN). El ítem 'mision1' (tipo quiz) se lee de mision1.json. 'enlaceConfig' apunta a un campo de config/estudio.enlaces (editable por la investigadora). Los códigos de asistencia de 'encuentro' los define cada promotor para su aula en el panel. Las claves 'responsable' y 'feedback' NO deben enviarse al navegador antes de que el participante responda.",
+  "modulos": [
+    {
+      "id": "lab",
+      "pantalla": "P05",
+      "grupo": "Aprender",
+      "color": "amarillo",
+      "icono": "🔬",
+      "semana": 1,
+      "titulo": "Laboratorio de Saberes",
+      "tituloControl": "Lecturas",
+      "descripcion": "Lecciones y misiones interactivas por nivel.",
+      "items": [
+        {
+          "id": "mision1",
+          "tipo": "quiz",
+          "semana": 1,
+          "brazos": [
+            "experimental"
+          ],
+          "xp": 40,
+          "titulo": "Misión 1 – Detectives del Antibiótico",
+          "fuente": "mision1.json",
+          "resumen": "10 casos para descubrir mitos. Cuenta tu primer intento."
+        },
+        {
+          "id": "lec-virus-bacterias",
+          "tipo": "lectura",
+          "semana": 1,
+          "titulo": "Nivel 1 · Virus y bacterias no son lo mismo",
+          "html": "<p><strong>Las bacterias</strong> son células vivas con pared celular, ribosomas propios y ADN libre en el citoplasma. Muchas viven en nuestro cuerpo sin causar daño y algunas causan infecciones.</p><p><strong>Los virus</strong> no son células: necesitan entrar en nuestras células para multiplicarse. Gripe, resfrío y COVID-19 son infecciones virales.</p><p><strong>Los antibióticos</strong> atacan estructuras que solo tienen las bacterias: la pared celular (amoxicilina, cefalosporinas), los ribosomas bacterianos (azitromicina, tetraciclinas) o la copia de su ADN (ciprofloxacino). Por eso no hacen efecto contra un virus.</p><p><strong>Idea clave:</strong> tomar un antibiótico para una infección viral no te cura y sí favorece que las bacterias de tu cuerpo se vuelvan resistentes.</p>"
+        },
+        {
+          "id": "lec-mitos",
+          "tipo": "lectura",
+          "semana": 2,
+          "titulo": "Nivel 2 · Los 5 mitos más comunes",
+          "html": "<ol><li><strong>«El antibiótico baja la fiebre.»</strong> No: la fiebre tiene muchas causas, casi siempre virales.</li><li><strong>«Si me siento mejor, lo dejo.»</strong> La duración la decide quien indicó el tratamiento.</li><li><strong>«Me sobró del tratamiento anterior, lo uso.»</strong> Síntomas parecidos no significan la misma infección.</li><li><strong>«El cuerpo se vuelve resistente.»</strong> Son las bacterias las que se vuelven resistentes.</li><li><strong>«Si lo venden sin receta, puedo tomarlo.»</strong> Poder comprarlo no lo vuelve necesario ni seguro.</li></ol>"
+        },
+        {
+          "id": "lec-mecanismos",
+          "tipo": "lectura",
+          "semana": 3,
+          "titulo": "Nivel 3 · Cómo resisten las bacterias",
+          "html": "<p>Las bacterias resisten de cuatro formas principales:</p><ul><li><strong>Destruyen el antibiótico</strong> con enzimas, como las betalactamasas y las carbapenemasas.</li><li><strong>Lo expulsan</strong> con bombas de eflujo antes de que haga efecto.</li><li><strong>Cambian el blanco</strong> donde actúa el antibiótico.</li><li><strong>Impiden su entrada</strong> modificando su membrana.</li></ul><p>Estos genes pueden pasar de una bacteria a otra en <strong>plásmidos</strong>, incluso entre especies distintas. Cada uso innecesario de antibióticos elimina a las bacterias sensibles y deja vía libre a las resistentes.</p>"
+        },
+        {
+          "id": "lec-una-salud",
+          "tipo": "lectura",
+          "semana": 10,
+          "titulo": "Nivel 4 · Una Salud",
+          "html": "<p>La resistencia une la salud de las <strong>personas</strong>, los <strong>animales</strong> y el <strong>ambiente</strong>. Los antibióticos se usan en medicina humana, en la crianza de animales y en la acuicultura. Sus residuos y las bacterias resistentes llegan al agua, al suelo y a los alimentos.</p><p>En una ciudad portuaria como el Callao, la pesca, la acuicultura y las aguas residuales forman parte de esa cadena. Por eso la solución también es colectiva: higiene, vacunación, agua segura y uso responsable de antibióticos en todos los sectores.</p>"
+        },
+        {
+          "id": "lec-control-10-mitos",
+          "tipo": "lectura",
+          "semana": 1,
+          "brazos": [
+            "control"
+          ],
+          "titulo": "Lectura · 10 ideas clave sobre antibióticos",
+          "html": "<ol><li>La gripe y el resfrío son causados por virus; los antibióticos no actúan sobre virus.</li><li>Cada antibiótico actúa sobre ciertas bacterias y no sobre otras.</li><li>Los antibióticos sobrantes no deben reutilizarse.</li><li>Son las bacterias, no el cuerpo, las que se vuelven resistentes.</li><li>La duración del tratamiento la decide quien lo indicó.</li><li>Poder comprar un antibiótico no significa necesitarlo.</li><li>Las bacterias resistentes pueden transmitirse entre personas, por agua y alimentos.</li><li>El mejor antibiótico es el adecuado para esa infección, no el de mayor espectro.</li><li>La resistencia afecta a personas, animales y ambiente (Una Salud).</li><li>Úsalos solo cuando un profesional de salud los indique.</li></ol>"
+        }
+      ]
+    },
+    {
+      "id": "botica",
+      "pantalla": "P06",
+      "grupo": "Aprender",
+      "color": "cian",
+      "icono": "💊",
+      "semana": 2,
+      "titulo": "Botica simulada",
+      "tituloControl": "Casos comentados",
+      "descripcion": "Decide qué haría el personaje. Cuenta tu primera decisión.",
+      "items": [
+        {
+          "id": "caso-botica-1",
+          "tipo": "caso",
+          "semana": 2,
+          "titulo": "Caso 1 · El boticario amable",
+          "texto": "Carla tiene dolor de garganta desde ayer. En la botica le dicen: «Llévate esta amoxicilina, con tres días se te pasa».",
+          "opciones": [
+            {
+              "texto": "Comprarla: el boticario sabe lo que recomienda.",
+              "responsable": false,
+              "feedback": "Riesgoso. La mayoría de dolores de garganta son virales. Tres días de antibiótico sin indicación no curan un virus y sí seleccionan bacterias resistentes."
+            },
+            {
+              "texto": "Agradecer, no comprarla y consultar en un servicio de salud.",
+              "responsable": true,
+              "feedback": "¡Decisión de Guardiana! Solo una evaluación distingue una faringitis viral de una bacteriana. Mientras tanto: líquidos, reposo y consultar si hay fiebre alta o dificultad para tragar."
+            },
+            {
+              "texto": "Comprarla y guardarla por si el dolor empeora.",
+              "responsable": false,
+              "feedback": "No es buena idea. Tener antibióticos guardados facilita la automedicación y el uso de medicamentos vencidos."
+            }
+          ]
+        },
+        {
+          "id": "caso-botica-2",
+          "tipo": "caso",
+          "semana": 2,
+          "titulo": "Caso 2 · El grupo de WhatsApp familiar",
+          "texto": "En el grupo familiar, la tía de Diego escribe: «Para la diarrea del bebé, denle un poquito de ciprofloxacino, a mí me sirvió».",
+          "opciones": [
+            {
+              "texto": "Reenviar el consejo a otros familiares por si les sirve.",
+              "responsable": false,
+              "feedback": "No. La mayoría de diarreas en niños son virales, y el ciprofloxacino no está indicado en general para niños sin evaluación médica. Reenviarlo multiplica el riesgo."
+            },
+            {
+              "texto": "Responder con respeto que el bebé debe ser evaluado y lo importante es hidratarlo.",
+              "responsable": true,
+              "feedback": "¡Muy bien! Corregir con respeto también es ser Guardián. En la diarrea infantil lo urgente es la hidratación (sales de rehidratación oral) y la evaluación si hay signos de alarma."
+            },
+            {
+              "texto": "No decir nada para no incomodar a la tía.",
+              "responsable": false,
+              "feedback": "Comprensible, pero el silencio deja circular un consejo que puede dañar a un bebé. Puedes responder con respeto o hablar en privado con los padres."
+            }
+          ]
+        },
+        {
+          "id": "caso-botica-3",
+          "tipo": "caso",
+          "semana": 3,
+          "titulo": "Caso 3 · Exámenes y resfrío",
+          "texto": "Kevin está en semana de exámenes, tiene resfrío y congestión. Un compañero le ofrece azitromicina: «Te la tomas tres días y quedas como nuevo».",
+          "opciones": [
+            {
+              "texto": "Aceptarla: no puede perder ningún examen.",
+              "responsable": false,
+              "feedback": "El resfrío es viral: la azitromicina no lo acorta. Además, la OMS la clasifica en el grupo «Precaución» porque su uso excesivo favorece la resistencia."
+            },
+            {
+              "texto": "Aceptarla, pero tomar solo una pastilla para probar.",
+              "responsable": false,
+              "feedback": "Una dosis aislada no cura nada y expone a las bacterias de tu cuerpo a una cantidad que favorece la resistencia."
+            },
+            {
+              "texto": "No aceptarla y manejar los síntomas; consultar si empeora.",
+              "responsable": true,
+              "feedback": "¡Decisión de Guardián! Descanso, líquidos y manejo de síntomas. Si hay fiebre alta por más de tres días o dificultad para respirar, consulta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retos",
+      "pantalla": "P07",
+      "grupo": "Jugar y actuar",
+      "color": "amarillo",
+      "icono": "🎯",
+      "semana": 5,
+      "titulo": "Retos semanales",
+      "tituloControl": "Tema de la semana",
+      "descripcion": "Cada lunes: 3 preguntas con explicación y un microcaso.",
+      "items": [],
+      "_retos": "retos.json"
+    },
+    {
+      "id": "voces",
+      "pantalla": "P08",
+      "grupo": "Aprender",
+      "color": "cian",
+      "icono": "🎧",
+      "semana": 1,
+      "titulo": "Voces de la RAM",
+      "tituloControl": "Podcast",
+      "descripcion": "Episodios de 5 a 8 minutos.",
+      "items": [
+        {
+          "id": "pod-1",
+          "tipo": "audio",
+          "semana": 1,
+          "titulo": "Episodio 1 · ¿Qué es una superbacteria?",
+          "enlace": ""
+        },
+        {
+          "id": "pod-2",
+          "tipo": "audio",
+          "semana": 8,
+          "titulo": "Episodio 2 · Testimonio: una infección resistente",
+          "enlace": ""
+        },
+        {
+          "id": "pod-3",
+          "tipo": "audio",
+          "semana": 9,
+          "titulo": "Episodio 3 · Enfermería frente a la RAM",
+          "enlace": ""
+        }
+      ]
+    },
+    {
+      "id": "caso",
+      "pantalla": "P14",
+      "grupo": "Jugar y actuar",
+      "color": "amarillo",
+      "icono": "🗺️",
+      "semana": 1,
+      "brazos": [
+        "experimental"
+      ],
+      "titulo": "Caso Callao 2050",
+      "descripcion": "La historia del brote. Cada semana se revela una nueva pista.",
+      "items": [
+        {
+          "id": "cap-1",
+          "tipo": "lectura",
+          "semana": 1,
+          "titulo": "Capítulo 1 · Alerta Callao 2050",
+          "html": "<p><em>Callao, año 2050.</em> En el hospital del puerto, tres pacientes con neumonía no responden a ningún antibiótico. El laboratorio confirma: <strong><em>Klebsiella pneumoniae</em> resistente a carbapenémicos</strong>, uno de los patógenos de prioridad crítica para la OMS.</p><p>Los tres compraron antibióticos en la misma botica del puerto semanas antes. Tu equipo de Guardianes recibe la misión: entender cómo empezó el brote y frenarlo antes de que los antibióticos dejen de funcionar.</p><p><strong>Pista 1:</strong> las bacterias no se volvieron resistentes de un día para otro.</p>"
+        },
+        {
+          "id": "cap-2",
+          "tipo": "lectura",
+          "semana": 3,
+          "titulo": "Capítulo 2 · La ruta de la botica",
+          "html": "<p>Los registros muestran que la botica vendía antibióticos sin receta para resfríos, diarreas y dolores de garganta. Muchos clientes tomaban dos o tres días y guardaban el resto.</p><p><strong>Pista 2:</strong> cada tratamiento innecesario o incompleto eliminó a las bacterias sensibles y dejó vivas a las resistentes.</p>"
+        },
+        {
+          "id": "cap-3",
+          "tipo": "lectura",
+          "semana": 6,
+          "titulo": "Capítulo 3 · Los Nuevos Fleming",
+          "html": "<p>En 1928, Alexander Fleming observó que un hongo, <em>Penicillium</em>, impedía crecer a las bacterias en una placa. Muchos antibióticos actuales vienen de microorganismos del suelo, como <em>Streptomyces</em>.</p><p>Las muestras de suelo que trajeron los equipos ya tienen resultados: mira la galería del encuentro 1.</p><p><strong>Pista 3:</strong> descubrir antibióticos nuevos es lento y difícil; cuidar los que tenemos es urgente.</p>"
+        },
+        {
+          "id": "cap-4",
+          "tipo": "lectura",
+          "semana": 10,
+          "titulo": "Capítulo 4 · El agua del puerto",
+          "html": "<p>El equipo de epidemiología encuentra genes de resistencia en las aguas residuales que llegan al mar y en peces de criaderos cercanos.</p><p><strong>Pista 4:</strong> la resistencia viaja entre personas, animales y ambiente. Es un problema de Una Salud.</p>"
+        },
+        {
+          "id": "cap-5",
+          "tipo": "lectura",
+          "semana": 16,
+          "titulo": "Capítulo final · Contención",
+          "html": "<p>Gracias a las campañas de los Guardianes, la botica dejó de vender antibióticos sin receta, las familias revisaron sus botiquines y el hospital reforzó el lavado de manos. El brote se contuvo.</p><p><strong>Misión cumplida:</strong> la resistencia no se vence con un solo héroe, sino con miles de decisiones responsables. Gracias, Guardián.</p>"
+        }
+      ]
+    },
+    {
+      "id": "misiones",
+      "pantalla": "P13",
+      "grupo": "Jugar y actuar",
+      "color": "cian",
+      "icono": "🧭",
+      "semana": 5,
+      "brazos": [
+        "experimental"
+      ],
+      "titulo": "Misiones de campo",
+      "descripcion": "Retos en tu familia y tu comunidad. Tu promotor valida la evidencia.",
+      "items": [
+        {
+          "id": "mision-botiquin",
+          "tipo": "mision",
+          "semana": 7,
+          "xp": 30,
+          "titulo": "Auditoría del botiquín",
+          "instrucciones": "Revisa el botiquín de tu casa. No necesitas fotos ni datos personales: solo responde con sinceridad.",
+          "campos": [
+            {
+              "id": "hayAntibioticos",
+              "etiqueta": "¿Encontraste antibióticos sobrantes?",
+              "tipo": "select",
+              "opciones": [
+                "Sí",
+                "No"
+              ]
+            },
+            {
+              "id": "cuantos",
+              "etiqueta": "¿Cuántos envases?",
+              "tipo": "numero"
+            },
+            {
+              "id": "accion",
+              "etiqueta": "¿Qué hiciste con ellos?",
+              "tipo": "select",
+              "opciones": [
+                "No había",
+                "Pregunté cómo desecharlos",
+                "Los separé para desecharlos",
+                "Los dejé guardados",
+                "Otro"
+              ]
+            },
+            {
+              "id": "comentario",
+              "etiqueta": "¿Qué aprendiste? (1–2 frases)",
+              "tipo": "textarea"
+            }
+          ]
+        },
+        {
+          "id": "mision-pasalo",
+          "tipo": "mision",
+          "semana": 8,
+          "xp": 30,
+          "titulo": "Pásalo",
+          "instrucciones": "Conversa con 3 familiares o amigos sobre el uso responsable de antibióticos usando la infografía que te comparte tu promotor.",
+          "campos": [
+            {
+              "id": "personas",
+              "etiqueta": "¿Con cuántas personas conversaste?",
+              "tipo": "numero"
+            },
+            {
+              "id": "mitos",
+              "etiqueta": "¿Qué mitos escuchaste?",
+              "tipo": "textarea"
+            },
+            {
+              "id": "reaccion",
+              "etiqueta": "¿Cómo reaccionaron?",
+              "tipo": "textarea"
+            }
+          ]
+        },
+        {
+          "id": "mision-campana",
+          "tipo": "mision",
+          "semana": 11,
+          "xp": 50,
+          "titulo": "Campaña del equipo",
+          "instrucciones": "Con tu equipo, crea una pieza de campaña. Si usaste IA generativa, verifica cada dato con fuentes de la OMS o el MINSA y anota lo que corregiste.",
+          "campos": [
+            {
+              "id": "formato",
+              "etiqueta": "Formato",
+              "tipo": "select",
+              "opciones": [
+                "Microrrelato",
+                "Reel de 60 s",
+                "Jingle",
+                "Afiche",
+                "Otro"
+              ]
+            },
+            {
+              "id": "enlace",
+              "etiqueta": "Enlace a la pieza (Drive, TikTok, Instagram…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "fuentes",
+              "etiqueta": "Datos verificados y su fuente",
+              "tipo": "textarea"
+            },
+            {
+              "id": "correcciones",
+              "etiqueta": "¿Qué corrigieron de la IA? (si la usaron)",
+              "tipo": "textarea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "encuentros",
+      "pantalla": "P11",
+      "grupo": "Conectar",
+      "color": "amarillo",
+      "icono": "🎥",
+      "semana": 6,
+      "titulo": "Encuentros en vivo",
+      "descripcion": "Tres encuentros virtuales de 45 min. Ingresa el código que da tu promotor.",
+      "items": [
+        {
+          "id": "enc-1",
+          "tipo": "encuentro",
+          "semana": 6,
+          "titulo": "Encuentro 1 · Revelación de las placas",
+          "enlaceConfig": "aula.encuentros.enc-1.enlace"
+        },
+        {
+          "id": "enc-2",
+          "tipo": "encuentro",
+          "semana": 10,
+          "titulo": "Encuentro 2 · Consejo de Guardianes: Una Salud",
+          "enlaceConfig": "aula.encuentros.enc-2.enlace"
+        },
+        {
+          "id": "enc-3",
+          "tipo": "encuentro",
+          "semana": 14,
+          "titulo": "Encuentro 3 · Festival de campañas",
+          "enlaceConfig": "aula.encuentros.enc-3.enlace"
+        }
+      ]
+    },
+    {
+      "id": "conectar",
+      "pantalla": "P10",
+      "grupo": "Conectar",
+      "color": "cian",
+      "icono": "💬",
+      "semana": 0,
+      "titulo": "Chat y comunidad",
+      "descripcion": "Grupo de tu aula (Telegram o WhatsApp), moderado por tu promotor.",
+      "items": [
+        {
+          "id": "grupo-aula",
+          "tipo": "enlace",
+          "semana": 0,
+          "titulo": "Grupo de tu aula",
+          "enlaceConfig": "aula.enlaceGrupo"
+        }
+      ]
+    },
+    {
+      "id": "evaluaciones",
+      "pantalla": "P12",
+      "grupo": "Mi progreso",
+      "color": "amarillo",
+      "icono": "📝",
+      "semana": 0,
+      "titulo": "Evaluaciones",
+      "descripcion": "Cuestionarios del estudio. Responde con sinceridad: no se califican.",
+      "items": [
+        {
+          "id": "eval-o1",
+          "tipo": "evaluacion",
+          "semana": 0,
+          "titulo": "Cuestionario inicial (O1)",
+          "enlaceConfig": "estudio.enlaces.o1"
+        },
+        {
+          "id": "eval-o2",
+          "tipo": "evaluacion",
+          "semana": 4,
+          "titulo": "Cuestionario de la semana 4 (O2)",
+          "enlaceConfig": "estudio.enlaces.o2"
+        },
+        {
+          "id": "eval-sat",
+          "tipo": "evaluacion",
+          "semana": 4,
+          "titulo": "Encuesta de satisfacción",
+          "enlaceConfig": "estudio.enlaces.satisfaccion"
+        },
+        {
+          "id": "eval-o3",
+          "tipo": "evaluacion",
+          "semana": 17,
+          "titulo": "Cuestionario final (O3)",
+          "enlaceConfig": "estudio.enlaces.o3"
+        }
+      ]
+    }
+  ]
+}

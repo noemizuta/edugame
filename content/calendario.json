@@ -1,0 +1,36 @@
+{
+  "_nota": "Calendario del estudio (decisión 7 de docs/DECISIONES.md): el estudio dura 1 semana y se cuenta por DÍAS desde aula.fechaInicio (día 1, fecha de Lima). Todo el contenido se abre el día 1; 'aperturas' indica las actividades que se abren otro día. Este archivo también ajusta los textos y las reglas de config-juego.json que dependían de las semanas, sin tocar los archivos originales del kit. El equipo de investigación puede cambiar estos valores.",
+  "duracionDias": 7,
+  "aperturas": {
+    "eval-o2": 7,
+    "eval-sat": 7,
+    "eval-o3": 7
+  },
+  "fases": [
+    { "desde": -9999, "hasta": 0, "texto": "Antes del inicio" },
+    { "desde": 1, "hasta": 7, "texto": "Día {n} de 7" },
+    { "desde": 8, "hasta": 9999, "texto": "Estudio finalizado" }
+  ],
+  "semaforo": { "verdeHastaDias": 1, "amarilloHastaDias": 3 },
+  "textos": {
+    "tarjetaExperimental": "Tu siguiente misión",
+    "tarjetaControl": "Siguiente tema",
+    "alDia": "¡Estás al día!",
+    "antesDelInicio": "El estudio aún no empieza"
+  },
+  "modulos": {
+    "retos": {
+      "titulo": "Retos",
+      "tituloControl": "Temas",
+      "descripcion": "3 preguntas con explicación y un microcaso por reto."
+    },
+    "caso": {
+      "descripcion": "La historia del brote, capítulo a capítulo."
+    }
+  },
+  "insignias": {
+    "racha4": { "nombre": "Racha 3", "como": "3 días seguidos con reto", "regla": "racha >= 3" },
+    "racha8": { "nombre": "Racha 5", "como": "5 días seguidos con reto", "regla": "racha >= 5" },
+    "racha12": { "nombre": "Racha 7", "como": "Los 7 días con reto", "regla": "racha >= 7" }
+  }
+}

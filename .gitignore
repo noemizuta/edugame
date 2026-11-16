@@ -1,0 +1,34 @@
+# dependencias y compilación
+node_modules/
+.next/
+out/
+build/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# variables y claves (NUNCA subir)
+.env*
+!.env.example
+*service-account*.json
+*-firebase-adminsdk-*.json
+
+# emuladores y logs
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+.emuladores/
+npm-debug.log*
+
+# pruebas
+test-results/
+playwright-report/
+blob-report/
+
+# kit original (respaldo local, no se sube)
+kit/
+
+# sistema
+.DS_Store
+Thumbs.db
+.vercel

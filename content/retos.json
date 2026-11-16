@@ -1,0 +1,149 @@
+{
+  "_nota": "Un reto por semana (5 a 16): 3 preguntas (10 XP cada respuesta correcta en el primer intento) y un microcaso (15 XP si la decisión es responsable). 'correcta' es el índice (0, 1 o 2) de la opción correcta. El grupo control ve el mismo contenido como lectura.",
+  "retos": [
+    { "semana": 5, "tema": "Repaso: bacterias, virus y antibióticos",
+      "preguntas": [
+        { "texto": "¿Cuál de estas infecciones suele ser causada por un virus?", "opciones": ["Resfrío común", "Infección urinaria", "Tuberculosis"], "correcta": 0, "explicacion": "El resfrío es viral. La infección urinaria y la tuberculosis son bacterianas y sí requieren antibióticos indicados por un profesional." },
+        { "texto": "¿Sobre qué estructura actúa la amoxicilina?", "opciones": ["El ADN del virus", "La pared celular bacteriana", "Las células del sistema inmune"], "correcta": 1, "explicacion": "La amoxicilina es un betalactámico: bloquea la síntesis de la pared celular de las bacterias. Los virus no tienen pared celular." },
+        { "texto": "Un moco verde o amarillo significa que…", "opciones": ["Siempre hay una infección bacteriana", "No necesariamente hay bacterias", "Hay que empezar antibiótico"], "correcta": 1, "explicacion": "El color del moco se debe a células de defensa y aparece también en infecciones virales. No es por sí solo un motivo para tomar antibióticos." }
+      ],
+      "caso": { "texto": "Tu compañera de equipo tiene gripe y te pide que le recomiendes «un antibiótico fuerte». ¿Qué le dices?",
+        "opciones": [
+          { "texto": "Que pida azitromicina en la botica.", "responsable": false, "feedback": "La gripe es viral: ningún antibiótico la cura." },
+          { "texto": "Que descanse, se hidrate y consulte si aparecen signos de alarma.", "responsable": true, "feedback": "¡Bien! Esa es la recomendación responsable. Signos de alarma: dificultad para respirar, fiebre alta persistente, dolor de pecho." },
+          { "texto": "Que tome el antibiótico que le sobró a su hermano.", "responsable": false, "feedback": "Los sobrantes no se reutilizan ni se comparten." }
+        ] } },
+    { "semana": 6, "tema": "Nuevos Fleming: de dónde vienen los antibióticos",
+      "preguntas": [
+        { "texto": "¿Qué observó Alexander Fleming en 1928?", "opciones": ["Un hongo que impedía crecer a las bacterias", "Un virus que destruía bacterias", "Una vacuna contra la neumonía"], "correcta": 0, "explicacion": "Fleming observó que el hongo Penicillium inhibía el crecimiento de estafilococos en una placa: así se descubrió la penicilina." },
+        { "texto": "Muchos antibióticos actuales provienen de…", "opciones": ["Microorganismos del suelo, como Streptomyces", "Plantas medicinales exclusivamente", "Síntesis química sin origen natural"], "correcta": 0, "explicacion": "Bacterias del suelo como Streptomyces producen estreptomicina, tetraciclinas y otros antibióticos. Por eso proyectos como Tiny Earth buscan nuevos antibióticos en muestras de suelo." },
+        { "texto": "Un halo transparente alrededor de una colonia en la placa indica…", "opciones": ["Contaminación de la placa", "Que inhibe el crecimiento de otra bacteria", "Que la colonia está muerta"], "correcta": 1, "explicacion": "El halo de inhibición muestra que esa colonia produce una sustancia que impide crecer a la bacteria de prueba: una posible antibiosis." }
+      ],
+      "caso": { "texto": "Un amigo dice: «No importa usar mal los antibióticos, la ciencia siempre descubre nuevos». ¿Qué respondes?",
+        "opciones": [
+          { "texto": "Que tiene razón, cada año salen muchos nuevos.", "responsable": false, "feedback": "En las últimas décadas se han descubierto muy pocas familias nuevas de antibióticos." },
+          { "texto": "Que descubrir uno nuevo toma muchos años y hay que cuidar los actuales.", "responsable": true, "feedback": "¡Exacto! Desarrollar un antibiótico nuevo puede tomar más de una década. Cuidar los actuales es urgente." },
+          { "texto": "Que da igual porque las superbacterias no existen.", "responsable": false, "feedback": "Las bacterias resistentes ya causan muertes en todo el mundo." }
+        ] } },
+    { "semana": 7, "tema": "El botiquín de casa",
+      "preguntas": [
+        { "texto": "¿Qué hacer con un antibiótico que sobró de un tratamiento?", "opciones": ["Guardarlo para la próxima vez", "Preguntar en un establecimiento de salud cómo desecharlo", "Regalarlo a un vecino"], "correcta": 1, "explicacion": "Los sobrantes no se reutilizan ni se regalan. Pregunta cómo desecharlos para no contaminar el ambiente." },
+        { "texto": "¿Por qué no se deben tirar antibióticos al desagüe?", "opciones": ["Porque atascan las tuberías", "Porque contaminan el agua y favorecen la resistencia", "No hay ningún problema"], "correcta": 1, "explicacion": "Los residuos de antibióticos en el agua presionan a las bacterias del ambiente a volverse resistentes." },
+        { "texto": "Encontrar antibióticos sobrantes en casa suele indicar que…", "opciones": ["Se compraron de más o no se completó un tratamiento", "La familia está muy sana", "El antibiótico era de mala calidad"], "correcta": 0, "explicacion": "Los sobrantes aparecen cuando se compra sin indicación o se interrumpe un tratamiento por cuenta propia." }
+      ],
+      "caso": { "texto": "Durante tu auditoría encuentras amoxicilina vencida. Tu mamá dice: «Guárdala, aún sirve». ¿Qué haces?",
+        "opciones": [
+          { "texto": "Guardarla en otro lugar para que no se pierda.", "responsable": false, "feedback": "Un medicamento vencido puede perder eficacia; guardarlo facilita la automedicación." },
+          { "texto": "Explicarle con calma por qué es mejor desecharla adecuadamente.", "responsable": true, "feedback": "¡Muy bien! Explicar con calma convence más que discutir." },
+          { "texto": "Tomarla tú para que no se desperdicie.", "responsable": false, "feedback": "Tomar un antibiótico sin necesidad solo aporta riesgos." }
+        ] } },
+    { "semana": 8, "tema": "Mitos en la familia",
+      "preguntas": [
+        { "texto": "Para la mayoría de diarreas agudas, lo más importante es…", "opciones": ["Tomar un antibiótico de inmediato", "Mantener una buena hidratación", "Dejar de tomar líquidos"], "correcta": 1, "explicacion": "La mayoría de diarreas agudas son virales y se resuelven solas. Lo urgente es hidratarse; consultar si hay sangre, fiebre alta o deshidratación." },
+        { "texto": "«Los antibióticos bajan la fiebre.» Esto es…", "opciones": ["Verdadero", "Falso", "Solo verdadero en niños"], "correcta": 1, "explicacion": "Los antibióticos no son antipiréticos. La fiebre puede tener muchas causas, la mayoría virales." },
+        { "texto": "Si un familiar insiste en un consejo equivocado, lo mejor es…", "opciones": ["Discutir hasta convencerlo", "Escuchar, explicar con respeto y sugerir consultar", "Ignorarlo siempre"], "correcta": 1, "explicacion": "Escuchar primero y explicar con respeto abre más puertas que confrontar." }
+      ],
+      "caso": { "texto": "Tu abuelo toma un antibiótico «cada vez que le duele la muela». ¿Qué le propones?",
+        "opciones": [
+          { "texto": "Que siga así porque le funciona.", "responsable": false, "feedback": "El antibiótico puede calmar una infección un tiempo, pero no resuelve la causa dental." },
+          { "texto": "Acompañarlo a una consulta odontológica.", "responsable": true, "feedback": "¡Gran decisión! El dolor dental se resuelve tratando la causa con el odontólogo." },
+          { "texto": "Que cambie a un antibiótico más fuerte.", "responsable": false, "feedback": "Más espectro no significa mejor y aumenta la presión de resistencia." }
+        ] } },
+    { "semana": 9, "tema": "Cómo resisten las bacterias",
+      "preguntas": [
+        { "texto": "Las betalactamasas son…", "opciones": ["Enzimas bacterianas que destruyen antibióticos", "Vitaminas que refuerzan antibióticos", "Defensas del cuerpo humano"], "correcta": 0, "explicacion": "Son enzimas que rompen el anillo betalactámico de penicilinas y cefalosporinas. Las carbapenemasas destruyen incluso carbapenémicos." },
+        { "texto": "Un plásmido es…", "opciones": ["Un tipo de virus humano", "Un fragmento de ADN que puede pasar entre bacterias", "Un antibiótico nuevo"], "correcta": 1, "explicacion": "Los plásmidos pueden llevar genes de resistencia y transferirse entre bacterias, incluso de especies distintas." },
+        { "texto": "Una bomba de eflujo permite a la bacteria…", "opciones": ["Expulsar el antibiótico antes de que actúe", "Moverse más rápido", "Producir vitaminas"], "correcta": 0, "explicacion": "Las bombas de eflujo sacan el antibiótico de la célula bacteriana y reducen su efecto." }
+      ],
+      "caso": { "texto": "En un video de TikTok dicen: «Si tomas antibióticos seguido, tu sangre se vuelve resistente». Te piden opinar en los comentarios.",
+        "opciones": [
+          { "texto": "Darle like y compartir.", "responsable": false, "feedback": "Compartir desinformación la multiplica." },
+          { "texto": "Comentar con respeto que son las bacterias las que se vuelven resistentes.", "responsable": true, "feedback": "¡Así se combate la desinformación! Un comentario claro y respetuoso puede llegar a muchas personas." },
+          { "texto": "Insultar al creador del video.", "responsable": false, "feedback": "Los insultos cierran la conversación y no corrigen el error." }
+        ] } },
+    { "semana": 10, "tema": "Una Salud",
+      "preguntas": [
+        { "texto": "El enfoque Una Salud reconoce que la resistencia une…", "opciones": ["Solo a hospitales y clínicas", "A personas, animales y ambiente", "Solo a la industria farmacéutica"], "correcta": 1, "explicacion": "Los antibióticos se usan en personas, animales y cultivos; sus residuos y las bacterias resistentes circulan entre todos." },
+        { "texto": "Usar antibióticos para que los animales de granja crezcan más rápido…", "opciones": ["No tiene relación con la salud humana", "Favorece bacterias resistentes que pueden llegar a las personas", "Elimina la resistencia"], "correcta": 1, "explicacion": "Ese uso selecciona bacterias resistentes en los animales, que pueden llegar a las personas por alimentos, agua o contacto." },
+        { "texto": "En una ciudad portuaria, una vía de diseminación de bacterias resistentes es…", "opciones": ["Las aguas residuales que llegan al mar", "La luz solar", "El viento del mar"], "correcta": 0, "explicacion": "Las aguas residuales sin tratamiento adecuado llevan bacterias, genes de resistencia y residuos de antibióticos al ambiente." }
+      ],
+      "caso": { "texto": "Un amigo que cría pollos te cuenta que les da antibióticos «para que no se enfermen». ¿Qué le sugieres?",
+        "opciones": [
+          { "texto": "Que siga, así se ahorra veterinario.", "responsable": false, "feedback": "El uso preventivo masivo favorece la resistencia en animales y personas." },
+          { "texto": "Que consulte a un veterinario sobre higiene, vacunas y uso adecuado.", "responsable": true, "feedback": "¡Excelente! La prevención con higiene, vacunas y asesoría veterinaria reduce la necesidad de antibióticos." },
+          { "texto": "Que use el doble de dosis.", "responsable": false, "feedback": "Más dosis sin indicación aumenta el problema." }
+        ] } },
+    { "semana": 11, "tema": "Prevenir infecciones",
+      "preguntas": [
+        { "texto": "¿Qué medida reduce la necesidad de antibióticos?", "opciones": ["Lavarse las manos con agua y jabón", "Tomar antibióticos preventivos", "Evitar las vacunas"], "correcta": 0, "explicacion": "Menos infecciones significa menos antibióticos. El lavado de manos es una de las medidas más efectivas." },
+        { "texto": "Las vacunas ayudan contra la resistencia porque…", "opciones": ["Matan bacterias resistentes", "Previenen infecciones y así se usan menos antibióticos", "No tienen relación con la resistencia"], "correcta": 1, "explicacion": "Por ejemplo, la vacuna contra el neumococo reduce neumonías y el uso de antibióticos; la de la influenza reduce consultas en las que a veces se recetan antibióticos sin necesidad." },
+        { "texto": "Un lavado de manos correcto dura aproximadamente…", "opciones": ["5 segundos", "40 a 60 segundos", "10 minutos"], "correcta": 1, "explicacion": "La OMS recomienda entre 40 y 60 segundos de lavado con agua y jabón, o 20 a 30 segundos con alcohol gel." }
+      ],
+      "caso": { "texto": "En el baño de tu facultad no hay jabón desde hace una semana. ¿Qué haces?",
+        "opciones": [
+          { "texto": "Nada, no es mi problema.", "responsable": false, "feedback": "La higiene es un tema colectivo: todos ganan si se resuelve." },
+          { "texto": "Reportarlo a la oficina responsable y avisar a tu promotor.", "responsable": true, "feedback": "¡Bien hecho! Prevenir infecciones también es parte de la lucha contra la resistencia." },
+          { "texto": "Dejar de lavarse las manos.", "responsable": false, "feedback": "Sin lavado de manos aumentan las infecciones." }
+        ] } },
+    { "semana": 12, "tema": "Cultivo y antibiograma",
+      "preguntas": [
+        { "texto": "Un antibiograma sirve para…", "opciones": ["Saber a qué antibióticos es sensible una bacteria", "Medir la fiebre", "Detectar virus"], "correcta": 0, "explicacion": "El antibiograma enfrenta la bacteria aislada a varios antibióticos y muestra cuáles la inhiben." },
+        { "texto": "En un antibiograma por discos, una bacteria resistente muestra…", "opciones": ["Un halo grande", "Un halo pequeño o ausente", "Cambio de color de la placa"], "correcta": 1, "explicacion": "Si el antibiótico no inhibe a la bacteria, esta crece cerca del disco: el halo es pequeño o no aparece." },
+        { "texto": "¿Por qué es útil un cultivo antes de ciertos tratamientos?", "opciones": ["Para elegir el antibiótico adecuado", "Para que el tratamiento sea más caro", "No es útil"], "correcta": 0, "explicacion": "Identificar la bacteria y su sensibilidad permite elegir el antibiótico más adecuado y de menor espectro." }
+      ],
+      "caso": { "texto": "A tu tía le piden un urocultivo, pero quiere empezar el antibiótico antes «para ganar tiempo». ¿Qué le aconsejas?",
+        "opciones": [
+          { "texto": "Que siga la indicación de tomar la muestra primero.", "responsable": true, "feedback": "¡Correcto! Empezar antes puede alterar el resultado del cultivo." },
+          { "texto": "Que empiece cualquier antibiótico que tenga en casa.", "responsable": false, "feedback": "Puede alterar el cultivo y no ser el adecuado." },
+          { "texto": "Que no se haga el cultivo.", "responsable": false, "feedback": "Sin cultivo es más difícil elegir el tratamiento correcto." }
+        ] } },
+    { "semana": 13, "tema": "Desinformación y fuentes confiables",
+      "preguntas": [
+        { "texto": "¿Cuál es una fuente confiable sobre antibióticos?", "opciones": ["Un video viral sin autor", "La OMS o el Ministerio de Salud", "Un mensaje reenviado muchas veces"], "correcta": 1, "explicacion": "Organismos como la OMS, la OPS o el MINSA publican información revisada por especialistas." },
+        { "texto": "Antes de compartir una publicación de salud conviene…", "opciones": ["Verificar quién la escribió y en qué se basa", "Compartirla rápido", "Fijarse solo en los likes"], "correcta": 0, "explicacion": "Revisar autor, fecha y fuentes evita multiplicar la desinformación." },
+        { "texto": "Si una IA te da un dato sobre antibióticos, debes…", "opciones": ["Aceptarlo siempre", "Verificarlo con una fuente oficial", "Publicarlo de inmediato"], "correcta": 1, "explicacion": "La IA puede equivocarse o inventar datos. Verifica cada afirmación antes de usarla en tu campaña." }
+      ],
+      "caso": { "texto": "Tu equipo encuentra una cifra impactante en internet para la campaña, pero no tiene fuente. ¿Qué hacen?",
+        "opciones": [
+          { "texto": "Usarla igual porque llama la atención.", "responsable": false, "feedback": "Una cifra sin fuente puede ser falsa y restar credibilidad a la campaña." },
+          { "texto": "Buscar el dato en una fuente oficial o no usarlo.", "responsable": true, "feedback": "¡Así trabaja un Guardián! Mejor un dato verificado que uno impactante." },
+          { "texto": "Inventar una fuente.", "responsable": false, "feedback": "Inventar fuentes es desinformar." }
+        ] } },
+    { "semana": 14, "tema": "Superbacterias prioritarias",
+      "preguntas": [
+        { "texto": "Los carbapenémicos son antibióticos…", "opciones": ["De último recurso para infecciones graves", "Para el resfrío", "De venta libre"], "correcta": 0, "explicacion": "Se reservan para infecciones graves. Las bacterias resistentes a carbapenémicos están en la categoría crítica de la OMS." },
+        { "texto": "¿Cuál de estas bacterias está en la lista de prioridad crítica de la OMS?", "opciones": ["Klebsiella pneumoniae resistente a carbapenémicos", "Lactobacillus del yogur", "Streptomyces del suelo"], "correcta": 0, "explicacion": "Klebsiella pneumoniae y Acinetobacter baumannii resistentes a carbapenémicos son de prioridad crítica." },
+        { "texto": "Una «superbacteria» es una bacteria que…", "opciones": ["Es más grande que las demás", "Resiste a varios antibióticos", "Solo vive en hospitales"], "correcta": 1, "explicacion": "Se llama así a bacterias resistentes a varios antibióticos, lo que deja pocas opciones de tratamiento." }
+      ],
+      "caso": { "texto": "Un familiar hospitalizado tiene una bacteria resistente y el personal pide lavarse las manos al entrar y salir. Otro familiar dice que es exagerado.",
+        "opciones": [
+          { "texto": "Darle la razón: es una exageración.", "responsable": false, "feedback": "Las manos son una vía principal de transmisión en hospitales." },
+          { "texto": "Explicar que así se evita que la bacteria pase a otros pacientes.", "responsable": true, "feedback": "¡Muy bien! Las medidas de higiene protegen a todos." },
+          { "texto": "Lavarse solo al salir.", "responsable": false, "feedback": "Hay que hacerlo al entrar y al salir." }
+        ] } },
+    { "semana": 15, "tema": "Dosis, duración y adherencia",
+      "preguntas": [
+        { "texto": "¿Quién decide la duración de un tratamiento antibiótico?", "opciones": ["El profesional que lo indica", "El paciente según cómo se sienta", "El boticario"], "correcta": 0, "explicacion": "La duración depende de la infección. Si quieres cambiarla o hay efectos adversos, consulta." },
+        { "texto": "Si olvidas una dosis, lo recomendable es…", "opciones": ["Tomar el doble en la siguiente", "Seguir las instrucciones del prospecto o preguntar al profesional", "Dejar el tratamiento"], "correcta": 1, "explicacion": "No dupliques dosis por tu cuenta: revisa las indicaciones o consulta." },
+        { "texto": "Tomar un antibiótico con alarmas en el celular ayuda a…", "opciones": ["Mantener niveles adecuados del medicamento", "Que haga efecto contra virus", "Acortar el tratamiento"], "correcta": 0, "explicacion": "Respetar los horarios mantiene la concentración necesaria para eliminar la bacteria." }
+      ],
+      "caso": { "texto": "Te recetaron un antibiótico cada 8 horas y te da diarrea leve al tercer día. ¿Qué haces?",
+        "opciones": [
+          { "texto": "Dejarlo de golpe sin avisar.", "responsable": false, "feedback": "Suspender por cuenta propia puede dejar la infección sin tratar." },
+          { "texto": "Consultar al profesional que lo indicó.", "responsable": true, "feedback": "¡Correcto! El profesional puede ajustar el tratamiento o darte indicaciones." },
+          { "texto": "Tomar otro antibiótico para la diarrea.", "responsable": false, "feedback": "Otro antibiótico sin indicación puede empeorar el problema." }
+        ] } },
+    { "semana": 16, "tema": "Repaso del Guardián",
+      "preguntas": [
+        { "texto": "La principal causa del aumento de la resistencia es…", "opciones": ["El uso innecesario e inadecuado de antibióticos", "El clima", "La comida picante"], "correcta": 0, "explicacion": "La OMS señala el mal uso y el uso excesivo como el principal motor de la resistencia." },
+        { "texto": "¿Qué frase resume el uso responsable?", "opciones": ["Antibiótico para todo", "Solo con indicación profesional, a la dosis y por el tiempo indicados", "Mientras más fuerte, mejor"], "correcta": 1, "explicacion": "Esa es la regla de oro del uso responsable." },
+        { "texto": "Como futuro profesional o ciudadano, tu papel contra la RAM es…", "opciones": ["Ninguno, es tema de médicos", "Usar bien los antibióticos y compartir información confiable", "Comprar antibióticos por si acaso"], "correcta": 1, "explicacion": "Cada decisión responsable y cada conversación informada suman." }
+      ],
+      "caso": { "texto": "Terminó la misión. Un compañero de otra facultad te pregunta qué aprendiste. ¿Qué haces?",
+        "opciones": [
+          { "texto": "Le cuentas 3 ideas clave y le compartes una fuente confiable.", "responsable": true, "feedback": "¡Eso es ser Guardián Una Salud! El conocimiento se multiplica al compartirlo." },
+          { "texto": "Le dices que no importa.", "responsable": false, "feedback": "La resistencia nos afecta a todos." },
+          { "texto": "Le recomiendas un antibiótico para su resfrío.", "responsable": false, "feedback": "¡Recuerda el caso 1! El resfrío es viral." }
+        ] } }
+  ]
+}

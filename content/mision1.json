@@ -1,0 +1,323 @@
+{
+  "_nota": "Misión 1 convertida desde el H5P «Misión 1 – Detectives del Antibiótico v2». Las opciones se barajan por usuario. Cuenta solo el primer intento. XP = round(aciertos/10 × 40). Las respuestas correctas y la retroalimentación NUNCA se envían al navegador antes de responder: se validan en el servidor.",
+  "id": "mision1",
+  "titulo": "MISIÓN 1 – Detectives del Antibiótico",
+  "xpMaximo": 40,
+  "umbralInsignia": 0.8,
+  "intro": {
+    "titulo": "🚨 ¡ALERTA EN LA UNAC!",
+    "parrafos": [
+      "Entre amigos, familiares y redes sociales circulan consejos sobre antibióticos que parecen confiables, pero algunos ponen en riesgo tu salud y la de tu comunidad.",
+      "Seguro alguna vez escuchaste: «Tómate un antibiótico, a mí me funcionó» o «Si te sientes mejor, ya puedes dejarlo».",
+      "🕵️ TU MISIÓN: resolver 10 casos. Cada respuesta correcta es una pista. Después de responder, lee la explicación: ahí está la ciencia detrás de cada caso.",
+      "🎯 Reglas: los casos aparecen en orden aleatorio y no puedes volver atrás. Con 8 pistas o más, completas la misión y ganas la insignia Detective del Antibiótico.",
+      "🚀 ¡Activa tu modo detective!"
+    ],
+    "boton": "¡Comenzar la misión!",
+    "imagen": "/img/mision1-portada.jpg"
+  },
+  "resultadoFinal": [
+    {
+      "desde": 0,
+      "hasta": 49,
+      "texto": "🔍 Detective en formación. Todavía hay mitos que te pueden engañar. Revisa las explicaciones y repite la misión: cada intento te acerca a la insignia."
+    },
+    {
+      "desde": 50,
+      "hasta": 79,
+      "texto": "🕵️ Buen trabajo, Agente. Ya distingues varios mitos, pero aún faltan pistas. Revisa los casos que fallaste y vuelve a intentarlo para ganar la insignia."
+    },
+    {
+      "desde": 80,
+      "hasta": 99,
+      "texto": "🏅 ¡Misión completada! Ganaste la insignia Detective del Antibiótico. Recuerda: los antibióticos no son para todo, y usarlos bien protege a toda la comunidad."
+    },
+    {
+      "desde": 100,
+      "hasta": 100,
+      "texto": "🏆 ¡Misión perfecta! Resolviste los 10 casos. Ganaste la insignia Detective del Antibiótico y estás listo para explicarle a tu familia por qué los antibióticos no son para todo."
+    }
+  ],
+  "casos": [
+    {
+      "id": "m1-c01",
+      "titulo": "¿La gripe se cura con antibióticos?",
+      "escena": "Ana tiene gripe (influenza) y se siente muy mal. Una amiga le aconseja tomar amoxicilina porque dice que así se recuperará más rápido.",
+      "pregunta": "¿Qué debería saber Ana antes de seguir ese consejo?",
+      "opciones": [
+        {
+          "texto": "Que la amoxicilina acorta la gripe si se toma desde el primer día.",
+          "correcta": false,
+          "feedback": "No. Los antibióticos no acortan la gripe: el virus de la influenza no tiene pared celular ni las estructuras sobre las que actúa la amoxicilina."
+        },
+        {
+          "texto": "Que la gripe la causa un virus y los antibióticos no actúan sobre él.",
+          "correcta": true,
+          "feedback": "¡Correcto! La amoxicilina es un betalactámico que bloquea la síntesis de la pared celular de las bacterias. Los virus no tienen pared celular, por eso no les hace efecto. Ante la gripe: reposo, líquidos y consulta si aparecen signos de alarma."
+        },
+        {
+          "texto": "Que la amoxicilina evita que la gripe se complique en cualquier caso.",
+          "correcta": false,
+          "feedback": "No. Tomar antibióticos «por si acaso» no evita las complicaciones en la mayoría de los casos y sí favorece la resistencia. Si aparece una complicación bacteriana, debe evaluarla un profesional de salud."
+        },
+        {
+          "texto": "Que basta con tomarla tres días para eliminar el virus de la influenza.",
+          "correcta": false,
+          "feedback": "No. Ninguna duración de antibiótico elimina un virus. Contra la influenza existen la vacuna y, en casos específicos, antivirales indicados por un médico."
+        }
+      ]
+    },
+    {
+      "id": "m1-c02",
+      "titulo": "¿Cualquier antibiótico funciona?",
+      "escena": "Pedro comenta durante el almuerzo: «Todos los antibióticos sirven para lo mismo. Lo importante es tomarlos cuando tienes una infección».",
+      "pregunta": "¿Qué le responderías?",
+      "opciones": [
+        {
+          "texto": "Que tiene razón: todos los antibióticos atacan a las mismas bacterias.",
+          "correcta": false,
+          "feedback": "No. Hay antibióticos que actúan sobre la pared celular, otros sobre los ribosomas o sobre el ADN bacteriano, y cada uno tiene un espectro distinto."
+        },
+        {
+          "texto": "Que la diferencia entre antibióticos es solo la marca y el precio.",
+          "correcta": false,
+          "feedback": "No. Dos antibióticos distintos pueden tener mecanismos y espectros muy diferentes. Lo que cambia solo en marca y precio es un mismo principio activo (genérico o de marca)."
+        },
+        {
+          "texto": "Que cada antibiótico actúa sobre ciertas bacterias y no sobre otras.",
+          "correcta": true,
+          "feedback": "¡Correcto! Cada antibiótico tiene un espectro de acción: el grupo de bacterias sobre el que funciona. Por eso elegirlo requiere saber qué infección hay, a veces con un cultivo y un antibiograma."
+        },
+        {
+          "texto": "Que cualquier antibiótico funciona si se toma más días de lo indicado.",
+          "correcta": false,
+          "feedback": "No. Prolongar un antibiótico que no actúa sobre esa bacteria no la elimina; solo aumenta los efectos adversos y la presión que selecciona bacterias resistentes."
+        }
+      ]
+    },
+    {
+      "id": "m1-c03",
+      "titulo": "¿Y si me quedaron antibióticos?",
+      "escena": "Luis tiene dolor de garganta y encuentra en casa unas cápsulas de antibiótico que le sobraron de un tratamiento anterior. Como está ocupado con sus exámenes, piensa usarlas para sentirse mejor.",
+      "pregunta": "¿Cuál sería la decisión más responsable?",
+      "opciones": [
+        {
+          "texto": "Tomar las cápsulas, porque ya le funcionaron en un tratamiento anterior.",
+          "correcta": false,
+          "feedback": "No. Que antes funcionara no significa que la causa sea la misma: muchos dolores de garganta son virales y no necesitan antibiótico."
+        },
+        {
+          "texto": "Tomarlas solo hasta que el dolor desaparezca y guardar el resto.",
+          "correcta": false,
+          "feedback": "No. Una dosis incompleta y sin indicación expone a las bacterias a cantidades que no las eliminan, lo que favorece la selección de resistentes. Guardar el resto repite el problema."
+        },
+        {
+          "texto": "Preguntar a un familiar cuántas cápsulas debería tomar al día.",
+          "correcta": false,
+          "feedback": "No. Aunque sea con buena intención, un familiar no puede evaluar la causa del dolor ni la dosis adecuada."
+        },
+        {
+          "texto": "No usarlas y consultar en el servicio médico o en un centro de salud.",
+          "correcta": true,
+          "feedback": "¡Correcto! Solo una evaluación profesional distingue una faringitis viral de una bacteriana. Los antibióticos sobrantes no se reutilizan ni se regalan: pregunta en un establecimiento de salud cómo desecharlos."
+        }
+      ]
+    },
+    {
+      "id": "m1-c04",
+      "titulo": "¿Tu cuerpo se vuelve resistente?",
+      "escena": "En TikTok aparece un video que afirma: «Si tomas antibióticos muchas veces, tu cuerpo se acostumbra y se vuelve resistente».",
+      "pregunta": "¿Qué explicación científica aclara este mensaje?",
+      "opciones": [
+        {
+          "texto": "Son las bacterias, no el cuerpo, las que se vuelven resistentes.",
+          "correcta": true,
+          "feedback": "¡Correcto! Las bacterias resisten por mutaciones o al recibir genes de otras bacterias (por ejemplo, en plásmidos). Esos genes les permiten destruir el antibiótico, expulsarlo o cambiar su blanco. Cada uso innecesario elimina a las sensibles y deja vivir a las resistentes."
+        },
+        {
+          "texto": "El cuerpo aprende a bloquear el antibiótico tras usarlo varias veces.",
+          "correcta": false,
+          "feedback": "No. El organismo humano no se vuelve resistente a los antibióticos. La resistencia es una propiedad de las bacterias."
+        },
+        {
+          "texto": "La resistencia aparece cuando la persona desarrolla alergia al antibiótico.",
+          "correcta": false,
+          "feedback": "No. La alergia es una reacción del sistema inmunitario de la persona y es un problema distinto. La resistencia ocurre en las bacterias."
+        },
+        {
+          "texto": "Las bacterias solo se vuelven resistentes en personas con defensas bajas.",
+          "correcta": false,
+          "feedback": "No. La resistencia puede seleccionarse en cualquier persona que usa antibióticos. Las defensas bajas aumentan el riesgo de infección, no crean la resistencia."
+        }
+      ]
+    },
+    {
+      "id": "m1-c05",
+      "titulo": "Si ya me siento bien, ¿puedo dejar el antibiótico?",
+      "escena": "María comenzó un tratamiento con antibióticos indicado por un médico. Después de dos días se siente mucho mejor y piensa dejarlo por su cuenta.",
+      "pregunta": "¿Qué sería lo más adecuado?",
+      "opciones": [
+        {
+          "texto": "Suspenderlo, porque sentirse mejor indica que la infección ya se curó.",
+          "correcta": false,
+          "feedback": "No. Los síntomas mejoran antes de que la infección esté controlada. La duración la decide quien indicó el tratamiento."
+        },
+        {
+          "texto": "Seguir la indicación médica y consultar antes de cambiar la duración.",
+          "correcta": true,
+          "feedback": "¡Correcto! La dosis y la duración dependen de la infección. Hoy muchos tratamientos son más cortos que antes, pero ese cambio lo define el profesional. Si aparecen efectos adversos, consulta."
+        },
+        {
+          "texto": "Reducir la dosis a la mitad para no tomar más medicamento del necesario.",
+          "correcta": false,
+          "feedback": "No. Una dosis menor puede no alcanzar la concentración necesaria para eliminar la bacteria y favorece la selección de resistentes."
+        },
+        {
+          "texto": "Guardar las cápsulas que sobren para usarlas si vuelve a enfermarse.",
+          "correcta": false,
+          "feedback": "No. Los sobrantes alimentan la automedicación futura. Si te sobran, pregunta en un establecimiento de salud cómo desecharlos."
+        }
+      ]
+    },
+    {
+      "id": "m1-c06",
+      "titulo": "Si lo venden, ¿significa que puedo tomarlo?",
+      "escena": "Javier tiene tos y dolor de garganta. Un amigo le dice: «Ve a la farmacia y compra un antibiótico. Si te lo venden, es porque puedes tomarlo».",
+      "pregunta": "¿Qué debería tener en cuenta Javier?",
+      "opciones": [
+        {
+          "texto": "Que un antibiótico es seguro siempre que se compre en una farmacia.",
+          "correcta": false,
+          "feedback": "No. Ningún medicamento es seguro por el lugar donde se compra; su seguridad depende de que esté indicado para tu caso."
+        },
+        {
+          "texto": "Que puede tomarlo si un familiar lo usó para síntomas parecidos.",
+          "correcta": false,
+          "feedback": "No. Síntomas parecidos pueden tener causas distintas, y la tos con dolor de garganta suele ser viral."
+        },
+        {
+          "texto": "Que poder comprarlo no significa que lo necesite para su enfermedad.",
+          "correcta": true,
+          "feedback": "¡Correcto! En el Perú los antibióticos deben venderse con receta médica. Que te lo vendan sin ella no lo hace adecuado: su uso innecesario causa efectos adversos y favorece la resistencia."
+        },
+        {
+          "texto": "Que sin receta es seguro si toma una dosis menor a la del prospecto.",
+          "correcta": false,
+          "feedback": "No. Una dosis menor no lo hace más seguro: puede ser insuficiente y favorecer bacterias resistentes."
+        }
+      ]
+    },
+    {
+      "id": "m1-c07",
+      "titulo": "¿Las bacterias resistentes pasan de una persona a otra?",
+      "escena": "En una conversación, un estudiante afirma: «Si alguien tiene una bacteria resistente, eso solo le afecta a esa persona. No puede transmitirla».",
+      "pregunta": "¿Cuál de las siguientes afirmaciones es correcta?",
+      "opciones": [
+        {
+          "texto": "No se transmiten, porque los antibióticos que tomó la persona las debilitan.",
+          "correcta": false,
+          "feedback": "No. Las bacterias resistentes sobreviven precisamente a ese antibiótico, así que no quedan debilitadas por él."
+        },
+        {
+          "texto": "Se transmiten, pero únicamente dentro de los hospitales y clínicas.",
+          "correcta": false,
+          "feedback": "No. Los hospitales son un foco importante, pero también hay bacterias resistentes en la comunidad, los animales, los alimentos y el agua."
+        },
+        {
+          "texto": "Una bacteria resistente pierde su capacidad de pasar a otra persona.",
+          "correcta": false,
+          "feedback": "No. La resistencia no le quita a la bacteria su capacidad de propagarse; incluso puede transferir sus genes de resistencia a otras bacterias."
+        },
+        {
+          "texto": "Pueden contagiarse por manos, contacto, agua o alimentos, según la bacteria.",
+          "correcta": true,
+          "feedback": "¡Correcto! Por eso la resistencia es un problema colectivo. La higiene de manos, la vacunación, la seguridad de los alimentos y el uso responsable de antibióticos reducen su propagación."
+        }
+      ]
+    },
+    {
+      "id": "m1-c08",
+      "titulo": "¿El antibiótico más potente siempre es mejor?",
+      "escena": "Sofía escucha que los antibióticos de amplio espectro son los mejores porque combaten muchos tipos de bacterias. Por eso cree que deberían usarse siempre.",
+      "pregunta": "¿Qué le explicarías?",
+      "opciones": [
+        {
+          "texto": "Que los de amplio espectro curan más rápido cualquier tipo de infección.",
+          "correcta": false,
+          "feedback": "No. Más espectro no significa más rapidez. Si la bacteria es sensible a un antibiótico de espectro reducido, ese suele ser igual de eficaz."
+        },
+        {
+          "texto": "Que el mejor antibiótico es el más adecuado para esa infección concreta.",
+          "correcta": true,
+          "feedback": "¡Correcto! Usar el antibiótico de menor espectro que funcione protege tu microbiota intestinal y reduce la selección de bacterias resistentes. La OMS clasifica los antibióticos en Acceso, Precaución y Reserva (AWaRe) para orientar esa elección."
+        },
+        {
+          "texto": "Que los de amplio espectro no producen efectos adversos en el intestino.",
+          "correcta": false,
+          "feedback": "No. Al eliminar también muchas bacterias beneficiosas del intestino, pueden causar diarrea y favorecer infecciones como la de <em>Clostridioides difficile</em>."
+        },
+        {
+          "texto": "Que todos los antibióticos son igual de eficaces ante cualquier infección.",
+          "correcta": false,
+          "feedback": "No. Cada antibiótico tiene un espectro distinto; ninguno sirve para todo."
+        }
+      ]
+    },
+    {
+      "id": "m1-c09",
+      "titulo": "¿La resistencia bacteriana solo ocurre en hospitales?",
+      "escena": "Durante una actividad universitaria, un compañero comenta: «La resistencia a los antibióticos es un problema de los hospitales. Quienes no trabajan en salud no tienen por qué preocuparse».",
+      "pregunta": "¿Qué respuesta ayudaría a comprender mejor el problema?",
+      "opciones": [
+        {
+          "texto": "Que la resistencia afecta a personas, animales y ambiente: es de todos.",
+          "correcta": true,
+          "feedback": "¡Correcto! Es el enfoque Una Salud: los antibióticos se usan en personas, en la crianza de animales y en la acuicultura, y sus residuos y las bacterias resistentes llegan al agua y al suelo. En una ciudad portuaria como el Callao, la pesca, la acuicultura y las aguas residuales forman parte de esa cadena."
+        },
+        {
+          "texto": "Que la resistencia bacteriana solo afecta a quienes están hospitalizados.",
+          "correcta": false,
+          "feedback": "No. Las infecciones resistentes también ocurren en la comunidad, por ejemplo urinarias, de piel o gastrointestinales."
+        },
+        {
+          "texto": "Que las bacterias resistentes solo surgen por antibióticos de hospital.",
+          "correcta": false,
+          "feedback": "No. También se seleccionan por el uso de antibióticos en la comunidad, en los animales y en el ambiente."
+        },
+        {
+          "texto": "Que quien no usa antibióticos nunca se infecta con bacterias resistentes.",
+          "correcta": false,
+          "feedback": "No. Las bacterias resistentes se transmiten entre personas, por los alimentos y por el agua, aunque tú no hayas tomado antibióticos."
+        }
+      ]
+    },
+    {
+      "id": "m1-c10",
+      "titulo": "¡Comparte un mensaje que sí ayude!",
+      "escena": "Tu facultad organizará una campaña en redes sociales para promover el uso responsable de antibióticos. Tu equipo debe elegir el mensaje que se publicará.",
+      "pregunta": "¿Cuál compartirías con la comunidad universitaria?",
+      "opciones": [
+        {
+          "texto": "«¿Tienes fiebre? Un antibiótico te ayuda a recuperarte más rápido».",
+          "correcta": false,
+          "feedback": "No. La fiebre puede deberse a virus y a muchas otras causas; este mensaje promueve la automedicación."
+        },
+        {
+          "texto": "«Si un antibiótico le funcionó a tu amigo, también puede servirte a ti».",
+          "correcta": false,
+          "feedback": "No. Cada infección y cada persona son diferentes; compartir antibióticos es una forma de automedicación."
+        },
+        {
+          "texto": "«Los antibióticos no son para todo: úsalos solo con receta médica».",
+          "correcta": true,
+          "feedback": "¡Correcto! Es un mensaje claro, corto y fácil de compartir. Úsalo como idea para la campaña de tu equipo en la «Misión Guardianes en Red»."
+        },
+        {
+          "texto": "«Guarda los antibióticos que te sobren: podrían servirte la próxima vez».",
+          "correcta": false,
+          "feedback": "No. Guardar sobrantes facilita la automedicación futura y el uso de medicamentos vencidos."
+        }
+      ]
+    }
+  ]
+}

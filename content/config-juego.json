@@ -1,0 +1,76 @@
+{
+  "_nota": "Reglas del juego y textos fijos de la app. La investigadora puede ajustarlos aquí sin tocar el código. Los enlaces externos (formularios O1–O3, Telegram) NO van aquí: se editan desde el panel de la investigadora y se guardan en config/estudio.",
+
+  "app": {
+    "nombre": "EduGame RAM",
+    "titulo": "Guardianes del Antibiótico",
+    "lema": "Aprende, juega y protege los antibióticos",
+    "institucion": "Universidad Nacional del Callao",
+    "tituloControl": "Aprende sobre antibióticos",
+    "zonaHoraria": "America/Lima",
+    "semanaFinal": 18,
+    "capacidadAula": 30,
+    "tamanoEquipo": 5
+  },
+
+  "niveles": [
+    { "nombre": "Recluta", "xp": 0 },
+    { "nombre": "Agente", "xp": 200 },
+    { "nombre": "Guardián", "xp": 450 },
+    { "nombre": "Guardián Una Salud", "xp": 800 }
+  ],
+
+  "xp": {
+    "retoCorrecta": 10,
+    "casoResponsable": 15,
+    "rachaSemana": 10,
+    "podcast": 5,
+    "encuentro": 20,
+    "evaluacion": 10,
+    "maxPorAccion": 60
+  },
+
+  "insignias": [
+    { "id": "explorador", "icono": "🔎", "nombre": "Explorador de la verdad", "como": "Completa la Misión 1", "regla": "mision1 completada" },
+    { "id": "detective", "icono": "🕵️", "nombre": "Detective del Antibiótico", "como": "Misión 1 con 8/10 o más", "regla": "mision1.puntaje / mision1.max >= 0.8" },
+    { "id": "agente", "icono": "🛡️", "nombre": "Agente RAM", "como": "3 decisiones responsables en la Botica", "regla": "al menos 3 actividades caso-botica-* con responsable = true" },
+    { "id": "auditor", "icono": "🧰", "nombre": "Auditor del botiquín", "como": "Misión del botiquín validada", "regla": "mision-botiquin completada (aprobada por el promotor)" },
+    { "id": "pasalo", "icono": "📣", "nombre": "Pásalo ×3", "como": "Misión «Pásalo» validada", "regla": "mision-pasalo completada" },
+    { "id": "voz", "icono": "🎬", "nombre": "Voz de la campaña", "como": "Campaña del equipo validada", "regla": "mision-campana completada" },
+    { "id": "fleming", "icono": "🧫", "nombre": "Nuevo Fleming", "como": "Asiste al encuentro 1", "regla": "enc-1 completada" },
+    { "id": "racha4", "icono": "🔥", "nombre": "Racha 4", "como": "4 semanas seguidas con reto", "regla": "racha >= 4" },
+    { "id": "racha8", "icono": "🔥", "nombre": "Racha 8", "como": "8 semanas seguidas con reto", "regla": "racha >= 8" },
+    { "id": "racha12", "icono": "🏆", "nombre": "Racha 12", "como": "12 semanas seguidas con reto", "regla": "racha >= 12" },
+    { "id": "unasalud", "icono": "🌎", "nombre": "Guardián Una Salud", "como": "Llega a 800 XP", "regla": "xp >= 800" }
+  ],
+
+  "avatares": ["🕵️", "🧑‍🔬", "👩‍⚕️", "🧑‍⚕️", "🧑‍🎓", "👩‍🔬", "🦸", "🧭"],
+
+  "consentimiento": {
+    "version": "2.0",
+    "texto": "Participo voluntariamente en el estudio «Intervención educativa gamificada sobre antibióticos y resistencia bacteriana» de la Universidad Nacional del Callao. Entiendo que: (1) ingreso con mi cuenta de Google y que mi correo se guarda por separado, solo para identificar mi cuenta, y nunca aparece en los datos del estudio; (2) la app me asigna un código anónimo y registra mi actividad (ingresos, respuestas y misiones) asociada solo a ese código; (3) puedo retirarme en cualquier momento sin consecuencias académicas. Esta aceptación digital complementa el consentimiento informado firmado.",
+    "casilla": "Acepto participar"
+  },
+
+  "derivacion": "Los promotores PRO-RAM educan, pero no diagnostican ni recomiendan medicamentos. Si tienes síntomas, dudas sobre un tratamiento o una reacción a un medicamento, acude al servicio médico de la UNAC o a tu establecimiento de salud más cercano.",
+
+  "reenganche": {
+    "amarillo": "Hola, {codigo}. Te extrañamos esta semana en EduGame RAM. Tu reto semanal toma menos de 5 minutos y tu equipo cuenta contigo. 🛡️",
+    "rojo": "Hola, {codigo}. Soy tu promotor PRO-RAM. Hace un tiempo no te vemos en EduGame RAM. ¿Todo bien? Si quieres, puedes ponerte al día esta semana. Estoy para ayudarte."
+  },
+
+  "semaforo": { "verdeHastaDias": 7, "amarilloHastaDias": 14 },
+
+  "fases": [
+    { "desde": -99, "hasta": -1, "texto": "Antes del inicio" },
+    { "desde": 0, "hasta": 0, "texto": "Semana 0 · Medición inicial" },
+    { "desde": 1, "hasta": 4, "texto": "Semana {n} · Fase presencial" },
+    { "desde": 5, "hasta": 16, "texto": "Semana {n} · Fase a distancia" },
+    { "desde": 17, "hasta": 99, "texto": "Semana {n} · Cierre" }
+  ],
+
+  "nombresControl": {
+    "grupos": { "Jugar y actuar": "Actividades" },
+    "tarjetaSemana": "Tema de la semana"
+  }
+}

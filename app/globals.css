@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+/* Tokens de diseño (sección 15 de la especificación) */
+@theme {
+  --color-fondo: #0b1f4d;
+  --color-fondo-2: #13306e;
+  --color-amarillo: #f6b81a;
+  --color-cian: #37d3f0;
+  --color-rosa: #e2407e;
+  --color-verde: #20a464;
+  --color-rojo: #d93a3a;
+  --color-tinta: #10223f;
+  --breakpoint-sm: 560px;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Color Emoji', sans-serif;
+}
+
+html {
+  background: var(--color-fondo);
+  color: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--color-fondo);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-cian);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* HTML de lecturas (ya saneado en el servidor) */
+.contenido-html p { margin-block: 0.6em; }
+.contenido-html ul { list-style: disc; padding-inline-start: 1.4em; margin-block: 0.6em; }
+.contenido-html ol { list-style: decimal; padding-inline-start: 1.4em; margin-block: 0.6em; }
+.contenido-html li { margin-block: 0.3em; }
+.contenido-html strong, .contenido-html b { font-weight: 700; }
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-8px) scale(0.95); }
+  to { opacity: 1; transform: none; }
+}
